@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  transition: 0.75s all;
+  min-height: 100vh;
+  background: url(../img/pyramide.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  overflow: hidden;
+}
+header div {
+  position: relative;
+}
+header div section {
+  background: white;
+  display: flex;
+  justify-content: end;
+  position: fixed;
+  height: 8vh;
+  width: 100%;
+}
+header div section ul {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+}
+header div section ul a {
+  transition: 0.4s;
+  text-decoration: none;
+}
+header div section ul a li {
+  margin-top: 2rem;
+  list-style: none;
+  color: #4e4949;
+  font-size: 2rem;
+}
+header div section ul a:hover {
+  box-shadow: 0 4px 0 #6d6b6b;
+}
+header div .banner {
+  position: absolute;
+  background-color: #f21818;
+  font-family: "Roboto";
+  top: -70rem;
+  right: -50rem;
+  transform: rotate(25deg);
+  overflow: hidden;
+}
+header div .banner h5 {
+  white-space: nowrap;
+  color: white;
+  -webkit-animation: banner 10s linear 0s infinite forwards;
+          animation: banner 10s linear 0s infinite forwards;
+  transform: rotate(40deg);
+  width: 100%;
+  font-size: 7rem;
+}
+header div .banner h5 span {
+  color: white;
+  -webkit-text-stroke: 2px black;
+}
+@-webkit-keyframes banner {
+  0% {
+    transform: translateX(40%);
+  }
+  20% {
+    transform: translateX(45%);
+  }
+  40% {
+    transform: translateX(50%);
+  }
+  60% {
+    transform: translateX(55%);
+  }
+  100% {
+    transform: translateX(60%);
+  }
+}
+@keyframes banner {
+  0% {
+    transform: translateX(40%);
+  }
+  20% {
+    transform: translateX(45%);
+  }
+  40% {
+    transform: translateX(50%);
+  }
+  60% {
+    transform: translateX(55%);
+  }
+  100% {
+    transform: translateX(60%);
+  }
+}
+
+main {
+  height: 100vh;
+}
+
+footer {
+  background: #575454;
+}
+footer section {
+  margin: 0 2rem 0 2rem;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  color: white;
+}
+footer section ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  width: 10%;
+}
+footer section ul a {
+  color: white;
+  transition: all 0.5s ease-in-out;
+}
+footer section ul a:hover {
+  transform: scale(1.5);
+}
+footer section ul i {
+  font-size: 1.8rem;
+}/*# sourceMappingURL=main.css.map */
