@@ -2,40 +2,38 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: "Roboto", sans-serif;
 }
 
-body {
-  font-family: "Courier New", Courier, monospace;
-  background: lightgrey;
+.heading {
+  width: 200px;
+  height: 200px;
+  background: magenta;
+  border: 5px solid gold;
+  border-radius: 50%;
+  text-align: center;
+  display: inline-block;
+  padding-top: 3%;
 }
 
 a {
-  width: 20%;
-  background: magenta;
-  padding: 10%;
-  border: 5px solid gold;
-  border-radius: 50%;
   text-decoration: none;
-  color: whitesmoke;
+  color: gold;
+  font-size: 2.5rem;
 }
 
-#artistPortfolio {
-  text-align: center;
-}
-#artistPortfolio section {
-  display: flex;
-  gap: 10%;
+section {
   width: 90%;
   margin: 5%;
 }
-#artistPortfolio section article {
-  width: 60%;
-  height: 40%;
-  background: grey;
+section article {
+  margin-top: 10%;
+  text-align: center;
 }
-#artistPortfolio section article div {
+section article h1 {
+  margin: 1rem auto;
+  width: 80%;
+}
+section article h1 img {
   width: 30%;
-}
-#artistPortfolio section article div img {
-  width: 100%;
 }/*# sourceMappingURL=artwork_detail.css.map */
