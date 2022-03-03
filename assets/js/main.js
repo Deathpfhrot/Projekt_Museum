@@ -51,36 +51,7 @@ fetch('https://api.artic.edu/api/v1/artworks?ids')
     .then(response => response.json())
     .then(json => console.log(json))
 
-// //-----------Frank JS ---------Main
 
-// // ------------------- Daten für die erste Seite ----------------------------------------
-// let section = document.createElement('section');
-// document.body.childNodes[1].appendChild(section)
-//     // document.body.appendChild(section);
-
-// let artWorkId;
-// let artistId;
-
-// artists.data.forEach(e => {
-
-//     // console.log("KünstlerId: " + e.id);
-//     // console.log("Künstler-Name: " + e.title);
-//     // console.log("Erstes Bild - ArtworkId: " + e.artwork_ids[0]);
-//     artWorkId = e.artwork_ids[0];
-
-//     fetch(`https://api.artic.edu/api/v1/artworks/${artWorkId}?fields=image_id`)
-//         .then(response => response.json())
-//         .then(json => {
-//             if (json.data.image_id != null) {
-//                 section.innerHTML += `
-//                     <article>
-//                         <h1>Künstler Name: ${e.title}</h1>
-//                         <p>Künstler ID: ${e.id}</p>
-//                         <img src="https://www.artic.edu/iiif/2/${json.data.image_id}/full/843,/0/default.jpg" alt=""></img>
-//                     </article>`
-//             }
-//         });
-// });
 
 //---------CodingFrank-------JS
 
@@ -110,12 +81,56 @@ fetch(`https://api.artic.edu/api/v1/artists`)
                         <article>
                             <h1>Künstler Name: ${e.title}</h1>
                             <p>Künstler ID: ${e.id}</p>
-                            <img src="https://www.artic.edu/iiif/2/${json.data.image_id}/full/843,/0/default.jpg" alt=""></img>
+                            <img id="${e.artwork_ids[0]}" src="https://www.artic.edu/iiif/2/${json.data.image_id}/full/843,/0/default.jpg" alt=""></img>
                         </article>`
+                        // ---------- Backup -----------------
+                        // let b = document.querySelectorAll('button');
+                        // b.forEach(btn => btn.addEventListener('click', (e) => {
+
+                        //     console.log(e.target.id);
+                        //     window.location.pathname = `ebene2.html/${e.target.id}`
+
+                        //     window.open(`https://www.artic.edu/artworks/${e.target.id}`);
+
+                        // }));
+                        // ------------------------------------
+                        let b = document.querySelectorAll('img');
+                        b.forEach(btn => btn.addEventListener('click', (e) => {
+
+                            console.log(e.target.id);
+                            // window.location.pathname = `ebene2.html/${e.target.id}`
+
+                            window.open(`https://www.artic.edu/artworks/${e.target.id}`);
+
+                        }));
+
+
+
                     }
+
                 });
         });
     });
+
+
+//--------------------------- Neue zweite Seite ----------------------------
+
+//Wenn Button Details gedrückt wird, muss die artWorkId an Fetch übertragen werden, eine neue Seite erstellen.
+
+// let b = document.querySelectorAll('button');
+// b.forEach(btn => btn.addEventListener('click', (e) => {
+
+//     console.log(e.target);
+// }));
+
+// let btn = document.getElementById(`${e.artwork_ids[0]}`);
+
+// btn.addEventListener('click', () => {
+
+//     console.log("hallo");
+
+// })
+
 
 
 
