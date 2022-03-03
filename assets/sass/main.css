@@ -103,8 +103,14 @@ header div .banner h5 span {
   }
 }
 
-main {
-  height: 100vh;
+main section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+main section article img {
+  width: 300px;
+  height: 300px;
 }
 
 footer {

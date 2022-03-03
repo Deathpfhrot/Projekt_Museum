@@ -26,7 +26,7 @@ var iterations = 0;
 //     //     index++;
 //     // }
 // }
-var updateImage = function() {
+var updateImage = function () {
 
     if (index >= images.length) {
         index = 0;
@@ -86,8 +86,7 @@ fetch('https://api.artic.edu/api/v1/artworks?ids')
 
 // ------------------- Daten für die erste Seite ----------------------------------------
 let section = document.createElement('section');
-document.body.childNodes[1].appendChild(section)
-document.body.appendChild(section);
+document.body.childNodes[3].appendChild(section)
 
 let artWorkId;
 let artistId;
