@@ -49,7 +49,7 @@ header div section ul a:hover {
 }
 header div .banner {
   position: absolute;
-  background-color: #f21818;
+  background-color: magenta;
   font-family: "Roboto";
   top: -70rem;
   right: -50rem;
@@ -58,7 +58,7 @@ header div .banner {
 }
 header div .banner h5 {
   white-space: nowrap;
-  color: white;
+  color: gold;
   -webkit-animation: banner 10s linear 0s infinite forwards;
           animation: banner 10s linear 0s infinite forwards;
   transform: rotate(40deg);
@@ -66,8 +66,8 @@ header div .banner h5 {
   font-size: 7rem;
 }
 header div .banner h5 span {
-  color: white;
-  -webkit-text-stroke: 2px black;
+  color: gold;
+  -webkit-text-stroke: 4px red;
 }
 @-webkit-keyframes banner {
   0% {

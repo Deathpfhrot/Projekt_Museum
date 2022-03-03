@@ -2,48 +2,66 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
-body{
-    font-family: 'Courier New', Courier, monospace;
-    background: lightgrey;
-}
+// #artistDetail{
+//     text-align: center;
+    
+//     section{
+//         display: flex;
+//         gap: 10%;
+//         width: 90%;
+//         margin: 5%;
+
+//         article{
+//             width: 60%;
+//             height: 40%;
+//             background: grey;
+
+            
+//         }
+//     }
+// }
 
 
-a{
-    width: 20%;
+.heading{
+    width: 200px;
+    height: 200px;
     background: magenta;
-    padding: 10%;
     border: 5px solid gold;
     border-radius: 50%;
-    text-decoration: none;
-    color: whitesmoke;
+    text-align: center;
+    display: inline-block;
+    padding-top: 3%;
 }
 
-#artistPortfolio{
-    text-align: center;
+a{
+    text-decoration: none;
+    color: gold;
+    font-size: 2.5rem;
+}
+
+section{
+    width: 90%;
+    margin: 5%;
+
+    article{
+        margin-top: 10%;
+        text-align: center;
     
-    section{
-        display: flex;
-        gap: 10%;
-        width: 90%;
-        margin: 5%;
-
-        article{
-            width: 60%;
-            height: 40%;
-            background: grey;
-
-            div{
-                width: 30%;
-        
-                img{
-                    width:100%;
-                }
+        h1{
+            margin: 1rem auto;
+            width: 80%;
+            
+            img{
+                width:30%;
             }
         }
     }
 }
+
+
 
 
 

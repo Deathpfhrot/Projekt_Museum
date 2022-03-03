@@ -97,10 +97,22 @@ fetch(`https://api.artic.edu/api/v1/artists`)
                         let b = document.querySelectorAll('img');
                         b.forEach(btn => btn.addEventListener('click', (e) => {
 
+                            let artwId = e.target.id;
                             console.log(e.target.id);
-                            // window.location.pathname = `ebene2.html/${e.target.id}`
+                            console.log(typeof (artwId));
 
-                            window.open(`https://www.artic.edu/artworks/${e.target.id}`);
+
+                            window.location.href = `assets/pages/artwork_detail.html?q=${artwId}`
+
+                            // let t = encodeURIComponent(`assets/pages/artwork_detail.html?q=${artwId}`)
+                            // console.log(t);
+                            // window.location.pathname = t;
+
+
+                            // http://127.0.0.1:5500
+
+                            // window.location.pathname = `assets/pages/artwork_detail.html/${e.target.id}`
+                            // window.open(`https://www.artic.edu/artworks/${e.target.id}`);
 
                         }));
 
