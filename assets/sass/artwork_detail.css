@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Courier New", Courier, monospace;
+  background: lightgrey;
+}
+
+a {
+  width: 20%;
+  background: magenta;
+  padding: 10%;
+  border: 5px solid gold;
+  border-radius: 50%;
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+#artistPortfolio {
+  text-align: center;
+}
+#artistPortfolio section {
+  display: flex;
+  gap: 10%;
+  width: 90%;
+  margin: 5%;
+}
+#artistPortfolio section article {
+  width: 60%;
+  height: 40%;
+  background: grey;
+}
+#artistPortfolio section article div {
+  width: 30%;
+}
+#artistPortfolio section article div img {
+  width: 100%;
+}/*# sourceMappingURL=artwork_detail.css.map */
