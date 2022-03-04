@@ -81,7 +81,7 @@ fetch(`https://api.artic.edu/api/v1/artists`)
                         <article>
                             <h1>Künstler Name: ${e.title}</h1>
                             <p>Künstler ID: ${e.id}</p>
-                            <img id="${e.artwork_ids[0]}" src="https://www.artic.edu/iiif/2/${json.data.image_id}/full/843,/0/default.jpg" alt=""></img>
+                            <img id="${e.id}" src="https://www.artic.edu/iiif/2/${json.data.image_id}/full/843,/0/default.jpg" alt=""></img>
                         </article>`
                         // ---------- Backup -----------------
                         // let b = document.querySelectorAll('button');
@@ -94,89 +94,31 @@ fetch(`https://api.artic.edu/api/v1/artists`)
 
                         // }));
                         // ------------------------------------
+
+                        // ------------- Original Code für Präsentation -------------------------
+                        // let b = document.querySelectorAll('img');
+                        // b.forEach(btn => btn.addEventListener('click', (e) => {
+
+                        //     let artwId = e.target.id;
+                        //     console.log(e.target.id);
+                        //     console.log(typeof (artwId));
+
+
+                        //     window.location.href = `assets/pages/artwork_detail.html?q=${artwId}`
+                        // }));
+
+                        // ------------------------------------
+
+                        // Durch klick auf Bild wir die Artist-ID ermittelt und diese dann an die Seite Artwork-Portfolio übergeben.
                         let b = document.querySelectorAll('img');
                         b.forEach(btn => btn.addEventListener('click', (e) => {
 
-                            let artwId = e.target.id;
-                            console.log(e.target.id);
-                            console.log(typeof (artwId));
-
-
-                            window.location.href = `assets/pages/artwork_detail.html?q=${artwId}`
-
-                            // let t = encodeURIComponent(`assets/pages/artwork_detail.html?q=${artwId}`)
-                            // console.log(t);
-                            // window.location.pathname = t;
-
-
-                            // http://127.0.0.1:5500
-
-                            // window.location.pathname = `assets/pages/artwork_detail.html/${e.target.id}`
-                            // window.open(`https://www.artic.edu/artworks/${e.target.id}`);
+                            window.location.href = `assets/pages/artist_portfolio.html?q=${e.target.id}`
 
                         }));
-
-
 
                     }
 
                 });
         });
     });
-
-
-//--------------------------- Neue zweite Seite ----------------------------
-
-//Wenn Button Details gedrückt wird, muss die artWorkId an Fetch übertragen werden, eine neue Seite erstellen.
-
-// let b = document.querySelectorAll('button');
-// b.forEach(btn => btn.addEventListener('click', (e) => {
-
-//     console.log(e.target);
-// }));
-
-// let btn = document.getElementById(`${e.artwork_ids[0]}`);
-
-// btn.addEventListener('click', () => {
-
-//     console.log("hallo");
-
-// })
-
-
-
-
-//---------------------- Daten für die zweite Seite --------------------------------------
-// Liefert alle artwork_ids für den ausgewählten Künstler abhängig von der KünstlerID
-// Don A. DuBroff
-// let kuenstlerId = 30979;
-
-// let newArtist = artists.data.filter(e => e.id == kuenstlerId)
-
-// console.log(newArtist[0].artwork_ids);
-
-// let newArrArtworkIds = newArtist[0].artwork_ids.slice(0,4);
-// console.log(newArrArtworkIds);
-
-// newArtist[0].artwork_ids.forEach(f => {
-//     console.log(f);
-
-
-//     fetch(`https://api.artic.edu/api/v1/artworks/${f}?fields=image_id,title,id`)
-//             .then(response => response.json())
-//             .then(json => { 
-//                 if (json.data.image_id != null) {
-//                     console.log(json.data.image_id);
-//                     section.innerHTML += `
-//                         <article>
-//                             <h1>Künstler Name: ${json.data.title}</h1>
-//                             <p>Künstler ID: ${json.data.id}</p>
-//                             <img src="https://www.artic.edu/iiif/2/${json.data.image_id}/full/843,/0/default.jpg" alt=""></img>
-//                         </article>`
-//                 }
-//             });
-
-// });
-
-
-// -----------------------------------------------------------------------------------------------
